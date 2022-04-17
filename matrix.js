@@ -42,7 +42,7 @@ let screenSizeY = cmdLines - 1;
 let lines = linesGenerator(screenSizeX);
 let pos = [];
 
-const timeOut = 1000;
+const timeOut = 80;
 
 setInterval(() => {
   if (cmdColumns !== process.stdout.columns || cmdLines !== process.stdout.rows) {
@@ -75,6 +75,6 @@ setInterval(() => {
   console.clear();
   for (let i = 0; i < screenSizeY; i++) {
     let finalStr = finalStrings.map(str => str[i]).join(" ");
-    console.log(colors.yellow, finalStr);
+    console.log(colors.green, finalStr);
   }
 }, timeOut);
